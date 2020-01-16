@@ -20,12 +20,14 @@ class Quickpay
     protected $currency = 'DKK';
     protected $payment_methods = '3d,creditcard';
     protected $callback_url;
+    protected $continue_url;
 
     public function __construct()
     {
         $credentials = null;
 
         $this->callback_url = route('quickpay.callback');
+        $this->continue_url = route('/');
 
         if (config('quickpay.api_key')) {
             $credentials = ":".config('quickpay.api_key');
