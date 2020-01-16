@@ -2,9 +2,10 @@
 
 namespace nickknissen\QuickPay;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\App;
-use QuickPay\QuickPay as QuickPayVendor;
 
+use QuickPay\QuickPay as QuickPayVendor;
 use nickknissen\QuickPay\Exceptions\QuickPayValidationError;
 use nickknissen\QuickPay\Exceptions\QuickPayTestNotAllowed;
 use nickknissen\QuickPay\Exceptions\ConfigNotCorrect;
@@ -58,7 +59,7 @@ class Quickpay
 
     public function orderIdPrefix() : string
     {
-        if (!str_contains(strtolower(config('app.env')), 'prod')) {
+        if (!Str::contains(Str::lower(config('app.env')), 'prod')) {
             return '';
         }
 
