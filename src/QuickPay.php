@@ -27,7 +27,7 @@ class Quickpay
         $credentials = null;
 
         $this->callback_url = route('quickpay.callback');
-        $this->continue_url = route('/');
+        $this->continue_url = url('/');
 
         if (config('quickpay.api_key')) {
             $credentials = ":".config('quickpay.api_key');
