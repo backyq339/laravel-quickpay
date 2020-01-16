@@ -33,8 +33,8 @@ class Payments extends Quickpay
         return $this->request('put', $url, [
             'amount' => $amount,
             'payment_methods' => $this->payment_methods,
-            'callback_url' => $this->callback_url,
             'continue_url' => $this->continue_url,
+            'callback_url' => $this->callback_url,
         ]);
     }
 
