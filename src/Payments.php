@@ -4,6 +4,7 @@ namespace nickknissen\QuickPay;
 
 class Payments extends Quickpay
 {
+    /*
     public function payments($options = []){
         return $this->request('get', '/payments', $options);
     }
@@ -15,7 +16,7 @@ class Payments extends Quickpay
     public function findByState(string $state){
         return $this->request('get', '/payments', ['state' => $state]);
     }
-
+    */
     public function findById(int $paymentId){
         $url = sprintf('/payments/%s', $paymentId);
         return $this->request('get', $url);
