@@ -6,7 +6,7 @@ Wrapper around [quickpay/quickpay-php-client](https://github.com/QuickPay/quickp
 ``` bash
 composer require nickknissen/laravel-quickpay
 
-php artisan publish --provider="nickknissen\QuickPay\QuickPayServiceProvider"
+php artisan vendor:publish --provider="nickknissen\QuickPay\QuickPayServiceProvider"
 
 #Create card migration
 php artisan migrate
